@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://labelStatus.gd" type="Script" id=1]
+[ext_resource path="res://buttonSendData.gd" type="Script" id=2]
 
 [node name="Server" type="Node2D"]
 
@@ -12,3 +13,18 @@ script = ExtResource( 1 )
 [node name="labelUserCount" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
+
+[node name="textToSend" type="LineEdit" parent="."]
+margin_left = 5.0
+margin_top = 35.0
+margin_right = 213.0
+margin_bottom = 88.0
+
+[node name="buttonSendData" type="Button" parent="."]
+margin_left = 226.0
+margin_top = 36.0
+margin_right = 432.0
+margin_bottom = 89.0
+text = "send data"
+script = ExtResource( 2 )
+[connection signal="pressed" from="buttonSendData" to="buttonSendData" method="_on_buttonSendData_pressed"]

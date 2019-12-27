@@ -24,5 +24,11 @@ margin_bottom = 164.0
 rect_pivot_offset = Vector2( -270, -70 )
 text = "Disconnect"
 script = ExtResource( 3 )
+
+[node name="labelServerData" type="Label" parent="."]
+margin_left = 28.0
+margin_top = 204.0
+margin_right = 492.0
+margin_bottom = 277.0
 [connection signal="pressed" from="buttonConnect" to="buttonConnect" method="_on_buttonConnect_pressed"]
 [connection signal="pressed" from="buttonDisconnect" to="buttonDisconnect" method="_on_buttonDisconnect_pressed"]

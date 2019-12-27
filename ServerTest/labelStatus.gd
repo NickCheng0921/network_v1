@@ -2,8 +2,8 @@ extends Label
 
 func _ready():
 	var network = NetworkedMultiplayerENet.new()
-	#listen on port 4242, 2 max connections
-	network.create_server(4242, 2)
+	#listen on port 4242, 3 max connections
+	network.create_server(4242, 3)
 	get_tree().set_network_peer(network)
 	
 	network.connect("peer_connected",self,"_peer_connected")
